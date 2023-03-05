@@ -1,4 +1,4 @@
 from django.urls import path
 from . import views
 
-urlpatterns = [path("/", views.taskList)]
+urlpatterns = [path("", views.taskList)]
