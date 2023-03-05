@@ -1,1 +1,12 @@
 <h1>TODOリスト</h1>
+
+<table>
+  <tr>
+    <th>タスク</th>
+    {% for task in tasks %}
+			<tr>
+				<td>{{task.title}}</td>
+			</tr>
+		{% endfor %}
+  </tr>
+</table>
