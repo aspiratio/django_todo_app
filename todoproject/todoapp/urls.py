@@ -1,4 +1,4 @@
 from django.urls import path
-from . import views
+from todoapp.views import TaskList
 
-urlpatterns = [path("", views.taskList)]
+urlpatterns = [path("", TaskList.as_view())]
