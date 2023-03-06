@@ -1,0 +1,10 @@
+<h2>タスクの追加</h2>
+<a href="{% url 'tasks' %}">戻る</a>
+
+<form action="" method="post">
+  <!-- CSRF検証を通過させるためのトークンをつける-->
+  {% csrf_token %}
+  <!-- as_p は各要素をpタグで囲むという意味-->
+  {{ form.as_p }}
+  <input type="submit" value="追加" />
+</form>
