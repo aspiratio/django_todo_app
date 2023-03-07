@@ -1,0 +1,8 @@
+<a href="{% url 'tasks' %}">戻る</a>
+<form action="" method="post">
+  <!-- CSRF検証を通過させるためのトークンをつける-->
+  {% csrf_token %}
+  <p>{{task}}を本当にタスクを削除しますか？</p>
+  <!-- as_p は各要素をpタグで囲むという意味-->
+  <input type="submit" value="削除" />
+</form>
