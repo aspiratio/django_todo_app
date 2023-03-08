@@ -5,6 +5,8 @@ from django.views.generic.list import ListView
 from django.views.generic.detail import DetailView
 from django.views.generic.edit import CreateView, UpdateView, DeleteView
 
+from django.contrib.auth.views import LoginView
+
 from todoapp.models import Task
 
 
@@ -39,3 +41,11 @@ class TaskDelete(DeleteView):
     # https://docs.djangoproject.com/en/4.1/topics/class-based-views/generic-display/
     # あえて"task"と設定する必要はないが明示的に指定した方がわかりやすいので設定しておく
     context_object_name = "task"
+
+
+class TaskListLoginView(LoginView):
+    fields = "__all__"  # Userモデルのfieldを全部使うという意味
+    template_name = "todoapp/login.html"
+
+    def get_success_url(self):
+        return reverse_lazy("tasks")
