@@ -1,3 +1,5 @@
+{% extends 'todoapp/base.html' %} {% block content %}
+
 <a href="{% url 'tasks' %}">戻る</a>
 <form action="" method="post">
   <!-- CSRF検証を通過させるためのトークンをつける-->
@@ -6,3 +8,4 @@
   <!-- as_p は各要素をpタグで囲むという意味-->
   <input type="submit" value="削除" />
 </form>
+{% endblock content %}

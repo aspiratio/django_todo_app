@@ -1,0 +1,18 @@
+body {
+  background-color: #9cbed5;
+  font-family: "M PLUS Rounded 1c", sans-serif;
+  padding-top: 55px;
+}
+
+.todoAppWrapper {
+  max-width: 530px;
+  margin: 0 auto;
+  background-color: white;
+  box-shadow: 17px 7px 15px -6px #777777;
+  border-radius: 10px;
+}
+
+a {
+  color: #595959;
+  text-decoration: none;
+}
