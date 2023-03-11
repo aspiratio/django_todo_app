@@ -30,8 +30,12 @@ class TaskDetail(LoginRequiredMixin, DetailView):
 
 class TaskCreate(LoginRequiredMixin, CreateView):
     model = Task
-    fields = "__all__"  # ["user", "title", ....] と書くのと同じ意味（全部のフィールドを指定したいときに便利）
+    fields = ["title", "description", "completed"]
     success_url = reverse_lazy("tasks")
+
+    def form_valid(self, form):
+        form.instance.user = self.request.user
+        return super().form_valid(form)
 
 
 class TaskUpdate(LoginRequiredMixin, UpdateView):
