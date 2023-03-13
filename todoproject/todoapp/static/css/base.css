@@ -92,7 +92,8 @@ a {
   width: 160px;
 }
 
-.searchButton {
+.searchButton,
+.submitButton {
   border: 1px solid lightseagreen;
   padding: 4px 10px;
   background-color: #fafafa;
@@ -101,7 +102,8 @@ a {
   font-size: 14px;
 }
 
-.searchButton:hover {
+.searchButton:hover,
+.submitButton:hover {
   background-color: lightseagreen;
   color: white;
 }
@@ -109,4 +111,13 @@ a {
 .addButton {
   font-size: 32px;
   color: lightseagreen;
+}
+
+label {
+  display: block;
+}
+
+.createTask input[type="text"],
+textarea {
+  width: 100%;
 }
