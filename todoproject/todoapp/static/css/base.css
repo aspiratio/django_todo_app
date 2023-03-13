@@ -89,7 +89,8 @@ a {
   border: 1px solid lightseagreen;
   border-radius: 5px;
   padding: 2px 4px;
-  width: 160px;
+  margin-right: 5px;
+  width: 160px !important;
 }
 
 .searchButton,
@@ -100,12 +101,17 @@ a {
   border-radius: 5px;
   cursor: pointer;
   font-size: 14px;
+  max-width: 100px;
 }
 
 .searchButton:hover,
 .submitButton:hover {
   background-color: lightseagreen;
   color: white;
+}
+
+.searchForm {
+  display: flex;
 }
 
 .deleteButton {
@@ -131,7 +137,7 @@ label {
   display: block;
 }
 
-.createTask input[type="text"],
+input,
 textarea {
   width: 100%;
 }
