@@ -108,6 +108,20 @@ a {
   color: white;
 }
 
+.deleteButton {
+  border: 1px solid red;
+  padding: 4px 10px;
+  background-color: #fafafa;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.deleteButton:hover {
+  background-color: red;
+  color: white;
+}
+
 .addButton {
   font-size: 32px;
   color: lightseagreen;
@@ -120,4 +134,12 @@ label {
 .createTask input[type="text"],
 textarea {
   width: 100%;
+}
+
+.registerWrapper {
+  padding: 20px;
+}
+
+.registerWrapper p {
+  margin: 0;
 }
