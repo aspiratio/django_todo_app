@@ -35,16 +35,20 @@
       <div class="taskCompletedIcon"></div>
       <s><a href="{% url 'task' task.id %}">{{task}}</a></s>
     </div>
-    <a href="{% url 'edit-task' task.id %}" class="editButton">編集</a>
-    <a href="{% url 'delete-task' task.id %}" class="deleteButton">×</a>
+    <div>
+      <a href="{% url 'edit-task' task.id %}" class="editButton">&#x270f;</a>
+      <a href="{% url 'delete-task' task.id %}" class="deleteButton">×</a>
+    </div>
     {% else %}
     <!-- タスクが未完了のとき -->
     <div class="taskTitle">
       <div class="taskInCompletedIcon"></div>
       <a href="{% url 'task' task.id %}">{{task}}</a>
     </div>
-    <a href="{% url 'edit-task' task.id %}" class="editButton">編集</a>
-    <a href="{% url 'delete-task' task.id %}" class="deleteButton">×</a>
+    <div>
+      <a href="{% url 'edit-task' task.id %}" class="editButton">&#x270f;</a>
+      <a href="{% url 'delete-task' task.id %}" class="deleteButton">×</a>
+    </div>
     {% endif%}
   </div>
   {% endfor %}
